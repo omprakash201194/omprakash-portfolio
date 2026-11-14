@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import { SITE } from '../consts';
+
+interface Props { title?: string; description?: string }
+const { title = SITE.title, description = SITE.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonical} />
+		<meta name="theme-color" content="#18212b" />
+	</head>
+	<body>
+		<a class="skip" href="#main">Skip to content</a>
+		<header class="site-header">
+			<div class="wrap">
+				<a class="brand" href="/">{SITE.name}</a>
+				<nav class="nav" aria-label="Main">
+					<a href="/#about">About</a>
+					<a href="/#work" aria-current={path.startsWith('/work') ? 'page' : undefined}>Work</a>
+					<a class="ext" href={SITE.blogUrl}>Blog</a>
+					<a href="/#contact">Contact</a>
+				</nav>
+			</div>
+		</header>
+		<main id="main"><slot /></main>
+		<footer class="site-footer">
+			<div class="wrap">
+				<div>© {new Date().getFullYear()} {SITE.name} · Pune, India</div>
+				<div class="links">
+					<a href={SITE.links.github} rel="me">GitHub</a>
+					<a href={SITE.links.linkedin} rel="me">LinkedIn</a>
+					<a href={`mailto:${SITE.email}`}>Email</a>
+					<a href="/resume/">Résumé</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+---
+<Base title="Résumé · Omprakash Gautam" description="Résumé of Omprakash Gautam, Lead Backend Engineer.">
+	<article class="prose">
+		<p class="no-print"><a class="back" href="/">← Home</a> · <button class="btn btn-ghost" style="padding:6px 14px" onclick="window.print()">Print or save as PDF</button></p>
+		<h1>Omprakash Gautam</h1>
+		<p class="muted">Lead Backend Engineer · AI agent backends, distributed systems, search and event pipelines<br />
+			Pune, India · <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · <a href={SITE.links.linkedin}>LinkedIn</a> · <a href={SITE.links.github}>GitHub</a></p>
+
+		<h2>Summary</h2>
+		<p>Lead backend engineer with ten years building multi-tenant, security-grade enterprise SaaS. I have bootstrapped three Spring Boot codebases from empty repositories, lead a 13-person middleware team, and build the backends and MCP tools behind AI agents. Strong in event pipelines (Kafka), search over large datasets (OpenSearch), API platforms (REST, OIDC), performance, and AI-assisted engineering.</p>
+
+		<h2>Experience</h2>
+		<h3 style="margin-bottom:0">Lead Full Stack Software Engineer · Qualys, Pune</h3>
+		<p class="muted">Sept 2019 – present (lead since June 2024)</p>
+		<ul>
+			<li>Build backends for AI agents: task, execution and remediation-planning APIs; turned post-launch failure analysis into three new MCP tools.</li>
+			<li>Lead the middleware and API layer of an enterprise risk platform from first customer demo to GA and 14+ releases; team grew from 5 to 13.</li>
+			<li>Designed the search layer on OpenSearch with per-customer scoping, and Kafka-driven indexing and reporting pipelines.</li>
+			<li>Delivered the public API platform: async reporting, OIDC authentication, RBAC, rate limits and public docs.</li>
+			<li>Ran the performance program, with large gains from caching, parallel fetching and batched queries.</li>
+			<li>Bootstrapped a new service to move a product out of a monolith (GA Dec 2022) and a shared platform library; earlier, led a dashboard service from an empty repository.</li>
+		</ul>
+		<h3 style="margin-bottom:0">Module Lead, Identity &amp; Access Management · Persistent Systems, Pune</h3>
+		<p class="muted">Sept 2016 – Sept 2019</p>
+		<ul>
+			<li>Led a module of an identity product: Java REST APIs on Oracle Identity Manager, from requirements to release.</li>
+			<li>Bravo Award (Mar 2018) for resolving critical Android application issues.</li>
+		</ul>
+
+		<h2>Skills</h2>
+		<ul>
+			<li><b>AI &amp; agents:</b> Claude Code, MCP servers and tools, LLM tool calling</li>
+			<li><b>Backend:</b> Java 8–21, Spring Boot, Spring Security, JPA/Hibernate, REST, Protobuf, SQL</li>
+			<li><b>Data &amp; streaming:</b> Kafka, Elasticsearch/OpenSearch, Redis, Oracle, Liquibase</li>
+			<li><b>Platform &amp; security:</b> Kubernetes, Helm, Docker, Jenkins, OIDC/OAuth2, RBAC, multi-tenant isolation</li>
+			<li><b>Quality:</b> JUnit 5, Mockito, Testcontainers, Prometheus, Grafana</li>
+		</ul>
+
+		<h2>Education and publications</h2>
+		<ul>
+			<li>B.E. Computer Engineering, University of Pune, 2012–2016</li>
+			<li>UiPath Certified Advanced RPA Developer (2019)</li>
+			<li>“Acceleration of CUDA programs for non-GPU users”, IEEE ICGCIOT, Jan 2016</li>
+		</ul>
+	</article>
+</Base>
