@@ -5,8 +5,8 @@ export const SITE = {
 	description:
 		'Lead backend engineer in Pune. Ten years building multi-tenant enterprise SaaS, search and event pipelines, and backends for AI agents. I also build and self-host my own apps.',
 	email: 'omprakash201194@gmail.com',
-	// Public Formspree endpoint. Replace YOUR_FORM_ID after creating the form at formspree.io.
-	formAction: 'https://formspree.io/f/YOUR_FORM_ID',
+	// Public Formspree endpoint.
+	formAction: 'https://formspree.io/f/xkjropzo',
 	blogUrl: 'https://blogs.gautamlabs.io',
 	wpApi: 'https://blogs.gautamlabs.io/wp-json/wp/v2/posts',
 	links: {
